@@ -1,20 +1,163 @@
-.q_content {
+.main {
+	background: url("/tree.png"), linear-gradient(#0ba5dd 0%, #aaf3fa 100%);
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom, center; /* 画像を中央に配置 */
+	background-size: 500px 700px, auto; /* グラデーションは自動サイズ、画像はカバー */
 	width: 100%;
-	height: 100%;
-	background: #f6b94d;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	height: 100vh;
+	position: fixed;
 }
-.back {
+
+.contents {
+	z-index: 100;
+}
+
+.clouds {
+	.cloud1 {
+		position: absolute;
+		top: 50px;
+		left: -30px;
+	}
+
+	.cloud2 {
+		position: absolute;
+		top: 120px;
+		right: -30px;
+	}
+}
+.tools {
+	background: #fffee9;
+	border-radius: 10px;
+	width: 60px;
+	height: 60px;
 	position: absolute;
+	right: -5px;
+	top: 300px;
+
+	.toolBar img {
+		width: 40px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.lookUp img {
+		position: absolute;
+		left: -30px;
+		top: -30px;
+	}
 }
-.back a {
-	position: relative;
-	left: 20px;
-	top: 20px;
-	font-size: 40px;
-	color: black;
-	font-weight: bold;
+
+.stages {
+	.stageImg {
+		position: relative;
+		display: flex;
+		gap: 50px;
+		top: 692px;
+		left: 130px;
+	}
+
+	.stagePick {
+		position: absolute;
+		bottom: 40px;
+		right: 20px;
+		display: flex;
+		gap: 20px;
+		align-items: flex-end;
+		background-color: transparent; /* 必要に応じて透明に設定 */
+	}
+
+	.stagePick {
+		background-color: none;
+	}
+
+	.stage {
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+	.stage img {
+		object-fit: contain;
+	}
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	height: 100dvh;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+
+	.modal-inner {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.modal-content {
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: 210px auto;
+		color: #f4f4f4;
+		animation-name: modalopen;
+		animation-duration: 1s;
+
+		.modal-header {
+			font-size: 1.1em;
+		}
+
+		.modal-body {
+			margin: auto;
+			border-radius: 20px;
+			width: 360px;
+			height: 280px;
+			background-color: #f2ac3b;
+
+			.a {
+				display: block;
+				flex-direction: column;
+				padding: 16px;
+				border-bottom: dotted 1px #f4f4f4;
+				text-decoration: none;
+				list-style: none;
+				color: #f4f4f4;
+				font-size: 1.6rem;
+			}
+		}
+
+		.modal-footer {
+			color: #f4f4f4;
+			font-size: 1rem;
+			padding: 10px;
+		}
+	}
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.modal-header h1 {
+	margin: 1rem 0;
+}
+
+.modal-close {
+	font-size: 1.8rem;
+}
+
+.modal-close:hover {
+	cursor: pointer;
 }

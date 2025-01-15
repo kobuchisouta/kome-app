@@ -1,38 +1,110 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from './page.module.css';
+//       <h1>Home</h1>
+//       <Link href="/quiz">Quiz</Link>
 
+//       <Link href="/home">Home</Link>
+
+//     </div>
+
+//   );
+// }
+"use client";
+import Head from 'next/head';
+import Image from 'next/image';
+import { useState } from 'react';
+import styles from './page.module.css'; // モジュールCSS
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
-    <div>
+    <>
+      <Head>
+        <title>米⭐︎すたー</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+        <meta name="description" content="ここに説明文を設定" />
+      </Head>
 
-      <div className={styles.q_content}>
-        <div className={styles.back}>
-          <p>
-            <Link href="#">
-              ←
-            </Link>
-          </p>
-        </div>
 
-        <div className={styles.title}>
-          <h1>エリア調査</h1>
+      <main className={styles.main}>
+        <div className={styles.contents}>
+          <div className={styles.clouds}>
+            <p className={styles.cloud1}>
+              <Image src="/cloud1.png" alt="雲" width={200} height={100} />
+            </p>
+            <p className={styles.cloud2}>
+              <Image src="/cloud2.png" alt="雲" width={170} height={100} />
+            </p>
+          </div>
+
+          <div className={styles.tools}>
+            <div className={styles.toolBar}>
+              <p>
+                <Image src="/tools.png" alt="道具" width={50} height={50} />
+              </p>
+            </div>
+            <div className={styles.lookUp}>
+              <p>
+                <Image src="/pickup.png" alt="見て" width={50} height={50} />
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.stages}>
+            <div className={styles.stagePick}>
+              <div className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image fill src="/pick.png" alt="クリック" />
+              </div>
+              <div className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image fill src="/pick.png" alt="クリック" />
+              </div>
+              <div className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image fill src="/pick.png" alt="クリック" />
+              </div>
+            </div>
+
+            {isModalOpen && (
+              <div className={styles.modal}>
+                <div className={styles.modalInner}>
+                  <div className={styles.modalContent}>
+                    <div className={styles.modalHeader}>
+                      <h1>土地選びと購入準備</h1>
+                    </div>
+                    <div className={styles.modalBody}>
+                      <a href="./index.html">エリア調査</a>
+                      <a href="#">土地の購入</a>
+                      <a href="#">土地の整地</a>
+                      <a href="#">水利権の確認</a>
+                      <a href="#">情報収集</a>
+                    </div>
+                    <div className={styles.modalFooter}>
+                      <span className={styles.modalClose} onClick={closeModal}>
+                        閉じる
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            <div className={styles.stageImg}>
+              <a className={styles.stage1}>
+                <Image src="/ine.png" alt="稲" width={50} height={50} />
+              </a>
+              <a className={styles.stage2}>
+                <Image src="/makimaki.png" alt="田植え" width={70} height={70} />
+              </a>
+              <a className={styles.stage3}>
+                <Image src="/sawasawa.png" alt="手入れ" width={70} height={70} />
+              </a>
+            </div>
+          </div>
         </div>
-        <div className={styles.quiz_questions}>
-          <p className={styles.qq}>
-            水田を作るには、水が十分に確保できる場所を選ぶことが大切です。
-            まず、近くに水源があるか、水を引くことができるか、そして稲作に適した気候かを確認します。
-            土地を買うときは、農地法というルールがあるので、役所に相談しながら進めます。
-          </p>
-        </div>
-        <div className={styles.next_btn}>
-          <Link href="/quiz1">次へ進む</Link>
-        </div>
-        <div className={styles.human}>
-          <Image src="/img/Group 75.png" alt="human" width={60} height={60} />
-        </div>
-      </div>
-    </div>
+      </main>
+
+    </>
   );
 }
+
