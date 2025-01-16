@@ -81,66 +81,61 @@
 }
 
 .modal {
-	display: none;
 	position: fixed;
-	z-index: 1;
-	left: 0;
 	top: 0;
-	height: 100vh;
-	height: 100dvh;
+	left: 0;
 	width: 100%;
-	overflow: auto;
+	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	text-align: center;
-
-	.modal-inner {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.modal-content {
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		margin: 210px auto;
-		color: #f4f4f4;
-		animation-name: modalopen;
-		animation-duration: 1s;
-
-		.modal-header {
-			font-size: 1.1em;
-		}
-
-		.modal-body {
-			margin: auto;
-			border-radius: 20px;
-			width: 360px;
-			height: 280px;
-			background-color: #f2ac3b;
-
-			.a {
-				display: block;
-				flex-direction: column;
-				padding: 16px;
-				border-bottom: dotted 1px #f4f4f4;
-				text-decoration: none;
-				list-style: none;
-				color: #f4f4f4;
-				font-size: 1.6rem;
-			}
-		}
-
-		.modal-footer {
-			color: #f4f4f4;
-			font-size: 1rem;
-			padding: 10px;
-		}
-	}
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
 }
 
+.modalInner {
+	background-color: #f2ac3b;
+	padding: 20px;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 500px;
+}
+
+.modalHeader,
+.modalBody,
+.modalFooter {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.modalHeader h1 {
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.modalBody a {
+	color: #fff;
+	border: #fff solid 1px;
+	width: 100%;
+	height: 50px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 8px;
+}
+
+.modalClose {
+	width: 150px;
+	height: 50px;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 50px;
+	background: #fff;
+}
 @keyframes modalopen {
 	from {
 		opacity: 0;

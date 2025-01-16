@@ -1,17 +1,9 @@
-//       <h1>Home</h1>
-//       <Link href="/quiz">Quiz</Link>
-
-//       <Link href="/home">Home</Link>
-
-//     </div>
-
-//   );
-// }
 "use client";
 import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './page.module.css'; // モジュールCSS
+import Link from 'next/link';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,7 +18,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
         <meta name="description" content="ここに説明文を設定" />
       </Head>
-
 
       <main className={styles.main}>
         <div className={styles.contents}>
@@ -54,15 +45,15 @@ export default function Home() {
 
           <div className={styles.stages}>
             <div className={styles.stagePick}>
-              <div className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
-                <Image fill src="/pick.png" alt="クリック" />
-              </div>
-              <div className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
-                <Image fill src="/pick.png" alt="クリック" />
-              </div>
-              <div className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
-                <Image fill src="/pick.png" alt="クリック" />
-              </div>
+              <button className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image src="/pick.png" alt="クリック" width={60} height={60} />
+              </button>
+              <button className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image src="/pick.png" alt="クリック" width={60} height={60} />
+              </button>
+              <button className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image src="/pick.png" alt="クリック" width={60} height={60} />
+              </button>
             </div>
 
             {isModalOpen && (
@@ -74,7 +65,7 @@ export default function Home() {
                     </div>
                     <div className={styles.modalBody}>
                       <a href="./index.html">エリア調査</a>
-                      <a href="#">土地の購入</a>
+                      <Link href={"/quiz"}>土地の購入</Link>
                       <a href="#">土地の整地</a>
                       <a href="#">水利権の確認</a>
                       <a href="#">情報収集</a>
@@ -103,8 +94,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
     </>
   );
 }
-
