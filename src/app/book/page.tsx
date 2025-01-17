@@ -11,6 +11,7 @@ import { useState } from 'react';
 
 export default function BookPage() {
     const [bookState, setBookState] = useState("");
+
     return (
         <>
             <div className={style.title}>

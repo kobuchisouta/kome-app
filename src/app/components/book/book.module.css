@@ -10,9 +10,10 @@
 	width: auto;
 	height: auto;
 	margin: 0;
-	padding: 0;
+	padding: 20px;
 	background-color: transparent;
 	border: none;
+	border-bottom: 1px solid #0d92c7;
 }
 
 .main1 p {

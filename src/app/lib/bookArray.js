@@ -14,4 +14,42 @@ export const bookArray = [
         img: "/makimaki.png",
         title: "土地選びと購入準備",
     },
+    {
+        link: "preparation",
+        img: "/makimaki.png",
+        title: "土地選びと購入準備",
+    },
+    {
+        link: "preparation",
+        img: "/makimaki.png",
+        title: "土地選びと購入準備",
+    },
+    {
+        link: "preparation",
+        img: "/makimaki.png",
+        title: "土地選びと購入準備",
+    },
+    {
+        link: "preparation",
+        img: "/makimaki.png",
+        title: "土地選びと購入準備",
+    },
+    {
+        link: "preparation",
+        img: "/makimaki.png",
+        title: "土地選びと購入準備",
+    },
+    {
+        link: "preparation",
+        img: "/makimaki.png",
+        title: "土地選びと購入準備",
+    },
+    {
+        link: "preparation",
+        img: "/makimaki.png",
+        title: "土地選びと購入準備",
+    },
+
+
+
 ]
