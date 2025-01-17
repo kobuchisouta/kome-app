@@ -32,12 +32,12 @@
 	height: 60px;
 	position: absolute;
 	right: -5px;
-	top: 300px;
+	top: 290px;
 
 	.toolBar img {
-		width: 40px;
-		height: 40px;
-		margin: 10px;
+		position: absolute;
+		top: 8px;
+		left: 4px;
 	}
 
 	.lookUp img {
@@ -58,12 +58,28 @@
 
 	.stagePick {
 		position: absolute;
-		bottom: 40px;
-		right: 20px;
+		bottom: 220px;
+		left: 120px;
 		display: flex;
 		gap: 20px;
 		align-items: flex-end;
 		background-color: transparent; /* 必要に応じて透明に設定 */
+	}
+	.stagePick:hover {
+		animation: poyopoyo 2s ease-out infinite;
+		opacity: 1;
+	}
+	@keyframes poyopoyo {
+		0%,
+		40%,
+		60%,
+		80% {
+			transform: scale(1.0);
+		}
+		50%,
+		70% {
+			transform: scale(0.95);
+		}
 	}
 
 	.stagePick {

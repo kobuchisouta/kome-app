@@ -45,15 +45,15 @@ export default function Home() {
 
           <div className={styles.stages}>
             <div className={styles.stagePick}>
-              <button className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
-                <Image src="/pick.png" alt="クリック" width={60} height={60} />
-              </button>
-              <button className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
-                <Image src="/pick.png" alt="クリック" width={60} height={60} />
-              </button>
-              <button className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
-                <Image src="/pick.png" alt="クリック" width={60} height={60} />
-              </button>
+              <a className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image src="/pick.png" alt="クリック" width={70} height={70} />
+              </a>
+              <a className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image src="/pick.png" alt="クリック" width={70} height={70} />
+              </a>
+              <a className={`${styles.stage} ${styles.modalOpen}`} onClick={openModal}>
+                <Image src="/pick.png" alt="クリック" width={70} height={70} />
+              </a>
             </div>
 
             {isModalOpen && (
@@ -64,8 +64,8 @@ export default function Home() {
                       <h1>土地選びと購入準備</h1>
                     </div>
                     <div className={styles.modalBody}>
-                      <a href="./index.html">エリア調査</a>
-                      <Link href={"/quiz"}>土地の購入</Link>
+                      <Link href={"/home"}>エリア調査</Link>
+                      <Link href={"/home"}>土地の購入</Link>
                       <a href="#">土地の整地</a>
                       <a href="#">水利権の確認</a>
                       <a href="#">情報収集</a>

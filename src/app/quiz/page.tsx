@@ -6,16 +6,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Quiz() {
-    const [quizCorrect, setQuizCorrect] = useState(null); // null: 未選択, true: 正解, false: 不正解
+    const [quizCorrect, setQuizCorrect] = useState<null | boolean>(null); // null: 未選択, true: 正解, false: 不正解
     const [isModalOpen, setIsModalOpen] = useState(false); // モーダルの状態
-    const quizRef = useRef(null);
+    const quizRef = useRef<HTMLDivElement | null>(null);
 
-    const playsound = (soundpath) => {
+    const playsound = (soundpath: string) => {
         const audio = new Audio(soundpath);
         audio.play();
     };
 
-    const handleAnswerClick = (isCorrect) => {
+    const handleAnswerClick = (isCorrect: boolean) => {
         setQuizCorrect(isCorrect);
         if (isCorrect) {
             playsound("/correct006.mp3");
@@ -24,8 +24,8 @@ export default function Quiz() {
         }
     };
 
-    const handleClickOutside = (event) => {
-        if (quizRef.current && !quizRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+        if (quizRef.current && !quizRef.current.contains(event.target as Node)) {
             setQuizCorrect(null);
         }
     };
@@ -38,7 +38,7 @@ export default function Quiz() {
     }, []);
 
     return (
-        <div className={style.main}>
+        <div className={style.main} ref={quizRef}>
             <div className={style.back}>
                 <p>
                     <Link href={"/home"}>←</Link>
