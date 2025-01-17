@@ -1,0 +1,29 @@
+.NewsAc{
+    display: flex;
+    /* flex-direction: column; */
+    position: relative;
+    width: 100vw;
+    height: 108px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-top: 1px solid #E2E2E2;
+    gap: 10px;
+    color: #000;
+}
+.NewsAc .title{
+    width: 204px;
+    height: 36px;
+    overflow: hidden;
+}
+.NewsAc img{
+    width: 30vw;
+    height: 16vw;
+}
+.date{
+    position: absolute;
+    font-size: 10px;
+    color: #686868;
+    left: 18px;
+    top: 4px;
+}

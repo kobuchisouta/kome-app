@@ -1,20 +1,174 @@
-.q_content {
+.main {
+	background: url("/tree.png"), linear-gradient(#0ba5dd 0%, #aaf3fa 100%);
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom, center; /* 画像を中央に配置 */
+	background-size: 500px 700px, auto; /* グラデーションは自動サイズ、画像はカバー */
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+}
+
+.contents {
+	z-index: 100;
+}
+
+.clouds {
+	.cloud1 {
+		position: absolute;
+		top: 50px;
+		left: -30px;
+	}
+
+	.cloud2 {
+		position: absolute;
+		top: 120px;
+		right: -30px;
+	}
+}
+.tools {
+	background: #fffee9;
+	border-radius: 10px;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	right: -5px;
+	top: 290px;
+
+	.toolBar img {
+		position: absolute;
+		top: 8px;
+		left: 4px;
+	}
+
+	.lookUp img {
+		position: absolute;
+		left: -30px;
+		top: -30px;
+	}
+}
+
+.stages {
+	.stageImg {
+		position: relative;
+		display: flex;
+		gap: 50px;
+		top: 692px;
+		left: 130px;
+	}
+
+	.stagePick {
+		position: absolute;
+		bottom: 220px;
+		left: 120px;
+		display: flex;
+		gap: 20px;
+		align-items: flex-end;
+		background-color: transparent; /* 必要に応じて透明に設定 */
+	}
+	.stagePick:hover {
+		animation: poyopoyo 2s ease-out infinite;
+		opacity: 1;
+	}
+	@keyframes poyopoyo {
+		0%,
+		40%,
+		60%,
+		80% {
+			transform: scale(1.0);
+		}
+		50%,
+		70% {
+			transform: scale(0.95);
+		}
+	}
+
+	.stagePick {
+		background-color: none;
+	}
+
+	.stage {
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+	.stage img {
+		object-fit: contain;
+	}
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #f6b94d;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+}
+
+.modalInner {
+	background-color: #f2ac3b;
+	padding: 20px;
+	border-radius: 10px;
+	width: 80%;
+	max-width: 500px;
+}
+
+.modalHeader,
+.modalBody,
+.modalFooter {
+	margin-bottom: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	gap: 10px;
 }
-.back {
-	position: absolute;
+
+.modalHeader h1 {
+	color: #fff;
+	font-size: 1.5rem;
 }
-.back a {
-	position: relative;
-	left: 20px;
-	top: 20px;
-	font-size: 40px;
-	color: black;
+
+.modalBody a {
+	color: #fff;
+	border: #fff solid 1px;
+	width: 100%;
+	height: 50px;
 	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 8px;
+}
+
+.modalClose {
+	width: 150px;
+	height: 50px;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 50px;
+	background: #fff;
+}
+@keyframes modalopen {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.modal-header h1 {
+	margin: 1rem 0;
+}
+
+.modal-close {
+	font-size: 1.8rem;
+}
+
+.modal-close:hover {
+	cursor: pointer;
 }

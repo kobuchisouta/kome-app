@@ -1,0 +1,12 @@
+.preparaotionWrap {
+	width: 100%;
+	display: flex;
+}
+.title {
+	font-size: 18px;
+}
+.text {
+	font-size: 14px;
+	padding: 22px 32px 32px 32px;
+	width: 100%;
+}

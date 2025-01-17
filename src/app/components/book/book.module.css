@@ -1,0 +1,21 @@
+.main1 {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	border-bottom: 1px solid #e2e2e2;
+	gap: 50px;
+	padding-left: 30px;
+	height: 100px;
+	text-decoration: none;
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+}
+
+.main1 p {
+	color: black;
+	font-weight: bold;
+}
