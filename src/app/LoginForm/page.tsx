@@ -1,7 +1,9 @@
+"use client"; // クライアントコンポーネントであることを明示
+
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/config";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation"; // next/navigation を使用
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -9,7 +11,7 @@ const LoginForm = () => {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
