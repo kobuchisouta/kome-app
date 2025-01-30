@@ -13,7 +13,7 @@ const News = () => {
         const dbapi = async () => {
             const apiKey = "28855e24623f4a09bcd9a264a1a29b70";
             const res = await fetch(
-                `https://newsapi.org/v2/everything?q=agriculture&language=jp&apiKey=${apiKey}`
+                `https://newsapi.org/v2/everything?q=agriculture&language=en&apiKey=${apiKey}`
             )
             const json = await res.json();
             setArticles(json?.articles);

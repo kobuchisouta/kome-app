@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0D92C7">
+    <link rel="stylesheet" href="css/quiz1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div class="back">
+        <p>
+            <a href="./index.html">←</a>
+        </p>
+    </div>
+    <div class="q_content">
+        <h1>エリア調査</h1>
+        <div class="quiz_wrap">
+            <div class="quiz_questions">
+                <p>
+                    Q.
+                    水田を作るためには十分な水のある場所を確保する
+                    必要があるが、その他にも稲作に適した何を確認する
+                    ことが大切ですか？
+                </p>
+                <div id="quizAns" class="quiz_ans">
+                    <p>
+                        A. 気候 ⭕️
+                    </p>
+                </div>
+                <div id="wrongAns" class="quiz_ans">
+                    <p>
+                        ❌ 不正解
+                    </p>
+                </div>
+                <div class="quiz_btn">
+                    <button data-correct="true">
+                        <p>気候</p>
+                    </button>
+                    <button data-correct="false">
+                        <p>気温や温度</p>
+                    </button>
+                    <button data-correct="false">
+                        <p>虫の量</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="next_btn_wrap">
+            <div class="next_btn">
+                <a href="./demo.html">項目選択へ</a>
+                <a href="./index.html">学びなおす</a>
+            </div>
+        </div>
+    </div>
+    <div class=".speech-bubble">
+        <div class="human">
+            <img src="./img/Group 75.png" alt="">
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalHeader">稲作と気候</h2>
+            <p id="modalText">
+                稲作は気候の影響を大きく受けます。
+                平均気温が25度くらいで、日光がたくさんある事が
+                重要です。昼夜の寒暖差が大きいとデンプンが米粒に多く残り、大きくて良質なお米が育ちます。
+                雪解け水が豊富な地域では水不足の心配が少なく稲作に適しています。
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="book">
+            <img src="./img/book.png" alt="">
+        </div>
+        <div class="home">
+            <img src="./img/house.png" alt="">
+        </div>
+        <div>
+            <img src="./img/globe.png" alt="">
+        </div>
+    </footer>
+    <script src="js/quiz1.js"></script>
+</body>
+
+</html>

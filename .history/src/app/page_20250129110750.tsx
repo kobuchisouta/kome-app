@@ -81,7 +81,7 @@ export default function Home() {
             )}
 
             <div className={styles.stageImg}>
-              <a className={styles.stage1} >
+              <a className={styles.stage1}>
                 <Image src="/ine.png" alt="稲" width={50} height={50} />
               </a>
               <a className={styles.stage2}>

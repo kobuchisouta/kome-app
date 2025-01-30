@@ -51,14 +51,14 @@
 		position: relative;
 		display: flex;
 		gap: 50px;
-		top: 555px;
-		left: 90px;
+		top: 500px;
+		left: 130px;
 	}
 
 	.stagePick {
 		position: absolute;
 		bottom: 220px;
-		left: 70px;
+		left: 120px;
 		display: flex;
 		gap: 20px;
 		align-items: flex-end;
@@ -107,7 +107,6 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 1000;
-	animation: modalopen 0.7s ease-in-out;
 }
 
 .modalInner {

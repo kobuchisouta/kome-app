@@ -23,7 +23,7 @@ export default function Home() {
         <div className={styles.contents}>
           <div className={styles.clouds}>
             <p className={styles.cloud1}>
-              <Image src="/cloud1.png" alt="雲" width={150} height={80} />
+              <Image src="/cloud1.png" alt="雲" width={80} height={40} />
             </p>
             <p className={styles.cloud2}>
               <Image src="/cloud2.png" alt="雲" width={170} height={100} />
@@ -81,7 +81,7 @@ export default function Home() {
             )}
 
             <div className={styles.stageImg}>
-              <a className={styles.stage1} >
+              <a className={styles.stage1}>
                 <Image src="/ine.png" alt="稲" width={50} height={50} />
               </a>
               <a className={styles.stage2}>
